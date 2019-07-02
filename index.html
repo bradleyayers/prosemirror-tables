@@ -1,13 +1,22 @@
-<!doctype html>
-<meta charset=utf8>
+<!DOCTYPE html>
+<meta charset="utf8" />
 <title>Table demo</title>
 
-<link rel=stylesheet href="node_modules/prosemirror-view/style/prosemirror.css">
-<link rel=stylesheet href="node_modules/prosemirror-menu/style/menu.css">
-<link rel=stylesheet href="node_modules/prosemirror-example-setup/style/style.css">
-<link rel=stylesheet href="style/tables.css">
-<link rel=stylesheet href="node_modules/prosemirror-gapcursor/style/gapcursor.css">
-<link rel=stylesheet href="style/tables.css">
+<link
+  rel="stylesheet"
+  href="node_modules/prosemirror-view/style/prosemirror.css"
+/>
+<link rel="stylesheet" href="node_modules/prosemirror-menu/style/menu.css" />
+<link
+  rel="stylesheet"
+  href="node_modules/prosemirror-example-setup/style/style.css"
+/>
+<link rel="stylesheet" href="style/tables.css" />
+<link
+  rel="stylesheet"
+  href="node_modules/prosemirror-gapcursor/style/gapcursor.css"
+/>
+<link rel="stylesheet" href="style/tables.css" />
 <style>
   body {
     max-width: 50em;
@@ -23,7 +32,8 @@
   .ProseMirror table {
     margin: 0;
   }
-  .ProseMirror th, .ProseMirror td {
+  .ProseMirror th,
+  .ProseMirror td {
     min-width: 1em;
     border: 1px solid #ddd;
     padding: 3px 5px;
@@ -39,16 +49,46 @@
 
 <h1>Table demo</h1>
 
-<div style="display: none" id=content>
-  <h2>Example content</h2>
-  <p>The table:</p>
+<div style="display: none" id="content">
   <table>
-    <tr><th colspan=3 data-colwidth="100,0,0">Wide header</td></tr>
-    <tr><td>One</td><td>Two</td><td>Three</td></tr>
-    <tr><td>Four</td><td>Five</td><td>Six</td></tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
   </table>
+
+  <p>
+    <b>Instructions:</b> Use Safari on macOS, and clicking into one of the cells
+    (except the top left one). The browser will then hang.
+  </p>
+
+  <p>
+    <b>Notes:</b>
+  </p>
+
+  <ul>
+    <li>
+      <p>
+        Removing <code>position: absolute</code> on the widget fixes the issue.
+      </p>
+    </li>
+    <li>
+      <p>
+        Adding text to any of the cells fixes the issue.
+      </p>
+    </li>
+    <li>
+      <p>Putting content before the table fixes the issue.</p>
+    </li>
+  </ul>
 </div>
 
-<div id=editor></div>
+<div id="editor"></div>
 
 <script src="demo_bundle.js"></script>
